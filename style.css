@@ -1,0 +1,23 @@
+.palhetaCores {color: #D16630}
+.palhetaCores {color: #235C44}
+.palhetaCores {color: #6D2975}
+.palhetaCores {color: #750D10}
+
+* {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: top;
+  background-color: #103451;
+}
+
+#title {
+  font-size: 40pt;
+  text-align: center;
+  color: #D16630;
+  margin: 20px;
+}
