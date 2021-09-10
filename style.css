@@ -1,23 +1,31 @@
-.palhetaCores {color: #D16630}
-.palhetaCores {color: #235C44}
-.palhetaCores {color: #6D2975}
-.palhetaCores {color: #750D10}
+.palhetaCores {color: #D16630; color: #235C44; color: #6D2975; color: #750D10}
 
 * {
   margin: 0;
-  font-family: Verdana, sans-serif;
 }
 
 body {
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: top;
   background-color: #103451;
+  font-family: Verdana, sans-serif;
 }
 
 #title {
   font-size: 40pt;
   text-align: center;
-  color: #D16630;
+  color: whitesmoke;
   margin: 20px;
+}
+
+.palettes {
+  display: block;
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
 }
