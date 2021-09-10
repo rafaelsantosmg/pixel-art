@@ -1,9 +1,9 @@
-const setColors = ['#000000', '#235C44', '#6D2975', '#750D10'];
+const setColors = ['rgb(0, 0, 0)', 'rgb(35, 92, 68)', 'rgb(109, 41, 117)', 'rgb(117, 13, 16)'];
 
 function createPaletteColors() {
   const paletteColor = document.querySelector('#color-palette');
   for (let index = 0; index < setColors.length; index += 1) {
-    const createListColor = document.createElement('li');
+    const createListColor = document.createElement('div');
     createListColor.style.backgroundColor = setColors[index];
     createListColor.classList.add('color');
     paletteColor.appendChild(createListColor);
@@ -36,9 +36,13 @@ function createColum() {
 
 createColum();
 
-function selectFistColor() {
-  const selectFist = document.querySelector('.color');
-  selectFist.classList.add('selected');
+const selectPalette = document.querySelectorAll('.color');
+selectPalette[0].classList.add('selected');
+for (let index = 0; index < selectPalette.length; index += 1) {
+  selectPalette[index].addEventListener('click', (event) => {
+    for (index = 0; index < selectPalette.length; index += 1) {
+      selectPalette[index].classList.remove('selected');
+      event.target.classList.add('selected');
+    }
+  });
 }
-
-selectFistColor();

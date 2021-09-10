@@ -23,7 +23,6 @@ body {
 }
 
 #color-palette {
-  display: block;
   text-align: center;
 }
 
@@ -50,8 +49,4 @@ body {
   width: 40px;
   height: 40px;
   border: 1px solid black;
-}
-
-.selected {
-  padding: 15px;
 }
