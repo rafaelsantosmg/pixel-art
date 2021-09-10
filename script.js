@@ -11,3 +11,27 @@ function createPaletteColors() {
 }
 
 createPaletteColors();
+
+function createLine() {
+  const lineColum = 5;
+  const pixelBoard = document.querySelector('#pixel-board');
+  for (let index = 0; index < lineColum; index += 1) {
+    const createLineBoard = document.createElement('li');
+    createLineBoard.style.backgroundColor = 'white';
+    createLineBoard.classList.add('pixel');
+    pixelBoard.appendChild(createLineBoard);
+  }
+}
+
+function createColum() {
+  const lineColum = 5;
+  const pixelBoard = document.querySelector('#pixel-board');
+  for (let index = 0; index < lineColum; index += 1) {
+    const createColumBoard = document.createElement('ul');
+    createColumBoard.classList.add('colum-pixel');
+    pixelBoard.appendChild(createColumBoard);
+    createLine();
+  }
+}
+
+createColum();
