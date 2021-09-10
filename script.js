@@ -35,3 +35,10 @@ function createColum() {
 }
 
 createColum();
+
+function selectFistColor() {
+  const selectFist = document.querySelector('.color');
+  selectFist.classList.add('selected');
+}
+
+selectFistColor();
