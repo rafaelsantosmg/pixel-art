@@ -2,14 +2,14 @@
   "stats": {
     "suites": 12,
     "tests": 41,
-    "passes": 0,
+    "passes": 11,
     "pending": 0,
-    "failures": 41,
-    "start": "2021-09-10T18:16:45.950Z",
-    "end": "2021-09-10T18:19:37.589Z",
-    "duration": 171639,
+    "failures": 30,
+    "start": "2021-09-10T19:44:49.977Z",
+    "end": "2021-09-10T19:46:44.244Z",
+    "duration": 114267,
     "testsRegistered": 41,
-    "passPercent": 0,
+    "passPercent": 26.82926829268293,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ffae5ffd-6310-4515-95c7-3610ffcdfa27",
+      "uuid": "5826fdc6-a39b-489b-af52-bd7a5c5cfec2",
       "title": "",
       "fullFile": "cypress/integration/project.spec.js",
       "file": "cypress/integration/project.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0bfbc19e-b5f1-4b08-87d9-9ff0fec3c52f",
+          "uuid": "2127d028-577b-4e4d-914d-464f22fbcd04",
           "title": "1 - Adicione à página o título \"Paleta de Cores\".",
           "fullFile": "",
           "file": "",
@@ -38,39 +38,35 @@
               "title": "Verifica se contém um elemento `h1` com o id `title` com o título correto",
               "fullTitle": "1 - Adicione à página o título \"Paleta de Cores\". Verifica se contém um elemento `h1` com o id `title` com o título correto",
               "timedOut": null,
-              "duration": 4116,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 119,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('h1#title').should('contain.text', 'Paleta de Cores');",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `h1#title`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `h1#title`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:72:24)",
-                "diff": null
-              },
-              "uuid": "06bda637-92d7-4dba-a201-3e94b6b75bba",
-              "parentUUID": "0bfbc19e-b5f1-4b08-87d9-9ff0fec3c52f",
+              "err": {},
+              "uuid": "c09628bd-11b2-4642-979f-392981fc4379",
+              "parentUUID": "2127d028-577b-4e4d-914d-464f22fbcd04",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "06bda637-92d7-4dba-a201-3e94b6b75bba"
+          "passes": [
+            "c09628bd-11b2-4642-979f-392981fc4379"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4116,
+          "duration": 119,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+          "uuid": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
           "title": "2 - Adicione à página uma paleta de quatro cores distintas.",
           "fullFile": "",
           "file": "",
@@ -81,21 +77,17 @@
               "title": "A paleta de cores deve ser um elemento com `id` denominado `color-palette`",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. A paleta de cores deve ser um elemento com `id` denominado `color-palette`",
               "timedOut": null,
-              "duration": 4104,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 64,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#color-palette').should('be.visible');\ncy.get('#color-palette').children('.color');",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:80:30)",
-                "diff": null
-              },
-              "uuid": "30fb029a-7070-4085-a47f-6501ec0736da",
-              "parentUUID": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+              "err": {},
+              "uuid": "f0f4e930-f98d-46e6-94bf-1454becac537",
+              "parentUUID": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
               "isHook": false,
               "skipped": false
             },
@@ -103,21 +95,17 @@
               "title": "Verifica se cada cor individual da paleta de cores possui a `classe` chamada `color`.",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se cada cor individual da paleta de cores possui a `classe` chamada `color`.",
               "timedOut": null,
-              "duration": 4084,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 70,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').should('have.length', 4).then(function (colors) {\n  for (var i = 0; i < colors.length; i++) {\n    cy.wrap(colors[i]).should('be.visible');\n  }\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:84:22)",
-                "diff": null
-              },
-              "uuid": "764539df-58c7-4e3f-9946-d37fee46421c",
-              "parentUUID": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+              "err": {},
+              "uuid": "e7a6f7df-2f54-42d3-970f-b6eb6c499fb5",
+              "parentUUID": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
               "isHook": false,
               "skipped": false
             },
@@ -125,21 +113,17 @@
               "title": "Verifica se a cor de fundo de cada elemento da paleta é a cor que o elemento representa. **A única cor não permitida na paleta é a cor branca.**",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a cor de fundo de cada elemento da paleta é a cor que o elemento representa. **A única cor não permitida na paleta é a cor branca.**",
               "timedOut": null,
-              "duration": 4073,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 90,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  cy.wrap(color).should('have.class', 'color').and('not.have.css', 'background-color', WHITE);\n  cy.wrap(color).should('have.css', 'background-color');\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:91:8)",
-                "diff": null
-              },
-              "uuid": "1fce72f2-fd86-4ad1-90c5-50b6c9a8c0b0",
-              "parentUUID": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+              "err": {},
+              "uuid": "37991466-c5f7-4e3e-b492-23929d9ac751",
+              "parentUUID": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
               "isHook": false,
               "skipped": false
             },
@@ -147,21 +131,17 @@
               "title": "Verifica se cada elemento da paleta de cores tem uma borda preta, sólida e com 1 pixel de largura;",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se cada elemento da paleta de cores tem uma borda preta, sólida e com 1 pixel de largura;",
               "timedOut": null,
-              "duration": 4078,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 83,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  cy.wrap(color).and('have.css', 'border', \"1px solid \".concat(BLACK)).and('have.class', 'color');\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:97:8)",
-                "diff": null
-              },
-              "uuid": "6b6af66f-1ceb-4477-8129-eebf6ceb9651",
-              "parentUUID": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+              "err": {},
+              "uuid": "132ae664-d034-4ade-b5b1-f8bc83051efd",
+              "parentUUID": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
               "isHook": false,
               "skipped": false
             },
@@ -169,21 +149,17 @@
               "title": "Verifica se a paleta lista todas as cores disponíveis para utilização, lado a lado.",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a paleta lista todas as cores disponíveis para utilização, lado a lado.",
               "timedOut": null,
-              "duration": 4095,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 83,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  for (var index = 1; index < colors.length; index += 1) {\n    var currentColor = colors[index];\n    var previousColor = colors[index - 1];\n    cy.wrap(currentColor).should('be.onTheRightOf', previousColor).and('be.horizontallyAlignedWith', previousColor);\n  }\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:102:8)",
-                "diff": null
-              },
-              "uuid": "7e1d11d7-08d2-42ce-822d-9169edcfcf23",
-              "parentUUID": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+              "err": {},
+              "uuid": "1b932578-7ce9-4b9f-99da-bd2c9bfc4d28",
+              "parentUUID": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
               "isHook": false,
               "skipped": false
             },
@@ -191,21 +167,17 @@
               "title": "Verifica se a paleta de cores está posicionada abaixo do título 'Paleta de Cores'",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a paleta de cores está posicionada abaixo do título 'Paleta de Cores'",
               "timedOut": null,
-              "duration": 4088,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 91,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('h1#title').then(function (title) {\n  cy.get('#color-palette').should('be.belowOf', title);\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `h1#title`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `h1#title`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:111:8)",
-                "diff": null
-              },
-              "uuid": "7847c41b-b6c9-46d4-801d-b037fb075b60",
-              "parentUUID": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+              "err": {},
+              "uuid": "76692b6d-7f21-477d-9ec5-1d5ed1b15a13",
+              "parentUUID": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
               "isHook": false,
               "skipped": false
             },
@@ -213,45 +185,41 @@
               "title": "Verifica se a paleta de cores não contém cores repetidas.",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a paleta de cores não contém cores repetidas.",
               "timedOut": null,
-              "duration": 4089,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 97,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  var allColors = Array.from(colors).map(function (color) {\n    return Cypress.$(color).css('background-color');\n  });\n  cy.log(allColors);\n  var uniqColors = (0, _toConsumableArray2[\"default\"])(new Set(allColors));\n  cy.log(uniqColors);\n  expect(allColors.length).to.eq(uniqColors.length);\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:116:8)",
-                "diff": null
-              },
-              "uuid": "8aec235f-a3b3-41f6-b03d-090a817dd6c4",
-              "parentUUID": "38bcb4ac-6882-489a-99b6-09cdb09eb273",
+              "err": {},
+              "uuid": "c6fc921e-6f86-446e-9d45-5cdc80865b68",
+              "parentUUID": "72d8d26d-bfc9-466b-85c9-feab9263fd8a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "30fb029a-7070-4085-a47f-6501ec0736da",
-            "764539df-58c7-4e3f-9946-d37fee46421c",
-            "1fce72f2-fd86-4ad1-90c5-50b6c9a8c0b0",
-            "6b6af66f-1ceb-4477-8129-eebf6ceb9651",
-            "7e1d11d7-08d2-42ce-822d-9169edcfcf23",
-            "7847c41b-b6c9-46d4-801d-b037fb075b60",
-            "8aec235f-a3b3-41f6-b03d-090a817dd6c4"
+          "passes": [
+            "f0f4e930-f98d-46e6-94bf-1454becac537",
+            "e7a6f7df-2f54-42d3-970f-b6eb6c499fb5",
+            "37991466-c5f7-4e3e-b492-23929d9ac751",
+            "132ae664-d034-4ade-b5b1-f8bc83051efd",
+            "1b932578-7ce9-4b9f-99da-bd2c9bfc4d28",
+            "76692b6d-7f21-477d-9ec5-1d5ed1b15a13",
+            "c6fc921e-6f86-446e-9d45-5cdc80865b68"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 28611,
+          "duration": 578,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "c1bf519f-cf84-4aed-ab17-1c228222b3b2",
+          "uuid": "2cb652e2-1915-46b0-9283-0790a434b5bf",
           "title": "3 - Adicione a cor **preta** como a primeira cor da paleta de cores.",
           "fullFile": "",
           "file": "",
@@ -262,21 +230,17 @@
               "title": "Verifica se a primeira cor da paleta é preta",
               "fullTitle": "3 - Adicione a cor **preta** como a primeira cor da paleta de cores. Verifica se a primeira cor da paleta é preta",
               "timedOut": null,
-              "duration": 4113,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 107,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').first().should('have.css', 'background-color', BLACK);",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:132:8)",
-                "diff": null
-              },
-              "uuid": "80ed620f-5d9b-45c5-807a-3e90be4ed727",
-              "parentUUID": "c1bf519f-cf84-4aed-ab17-1c228222b3b2",
+              "err": {},
+              "uuid": "ed96eb91-95f6-45d4-98ff-b265997aec85",
+              "parentUUID": "2cb652e2-1915-46b0-9283-0790a434b5bf",
               "isHook": false,
               "skipped": false
             },
@@ -284,40 +248,36 @@
               "title": "Verifica se as demais cores podem ser escolhidas livremente.",
               "fullTitle": "3 - Adicione a cor **preta** como a primeira cor da paleta de cores. Verifica se as demais cores podem ser escolhidas livremente.",
               "timedOut": null,
-              "duration": 4081,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 128,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').eq(1).should('not.have.css', 'background-color', BLACK);\ncy.get('.color').eq(1).should('not.have.css', 'background-color', WHITE);\ncy.get('.color').eq(1).should('not.have.css', 'background-color', 'rgba(0, 0, 0, 0)');\ncy.get('.color').eq(1).should('have.css', 'background-color');\ncy.get('.color').eq(2).should('not.have.css', 'background-color', BLACK);\ncy.get('.color').eq(2).should('not.have.css', 'background-color', WHITE);\ncy.get('.color').eq(2).should('not.have.css', 'background-color', 'rgba(0, 0, 0, 0)');\ncy.get('.color').eq(2).should('have.css', 'background-color');\ncy.get('.color').eq(3).should('not.have.css', 'background-color', BLACK);\ncy.get('.color').eq(3).should('not.have.css', 'background-color', WHITE);\ncy.get('.color').eq(3).should('not.have.css', 'background-color', 'rgba(0, 0, 0, 0)');\ncy.get('.color').eq(3).should('have.css', 'background-color');",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:135:8)",
-                "diff": null
-              },
-              "uuid": "f6d11249-9a19-4de3-ad05-59dd21c51b6f",
-              "parentUUID": "c1bf519f-cf84-4aed-ab17-1c228222b3b2",
+              "err": {},
+              "uuid": "992d1e9a-bddd-49d4-b2b1-ca5ce06e0bde",
+              "parentUUID": "2cb652e2-1915-46b0-9283-0790a434b5bf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "80ed620f-5d9b-45c5-807a-3e90be4ed727",
-            "f6d11249-9a19-4de3-ad05-59dd21c51b6f"
+          "passes": [
+            "ed96eb91-95f6-45d4-98ff-b265997aec85",
+            "992d1e9a-bddd-49d4-b2b1-ca5ce06e0bde"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8194,
+          "duration": 235,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "45cbd16e-38e2-42c3-a4a0-fe23920a97cb",
+          "uuid": "d3ec1278-28c8-4a61-814a-1bfb9d1aa00c",
           "title": "4 - Adicione à página um quadro de pixels, com 25 pixels.",
           "fullFile": "",
           "file": "",
@@ -328,7 +288,7 @@
               "title": "Verifica se o quadro de pixels possui o `id` denominado `pixel-board`",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se o quadro de pixels possui o `id` denominado `pixel-board`",
               "timedOut": null,
-              "duration": 4110,
+              "duration": 4092,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -338,11 +298,11 @@
               "code": "cy.get('#pixel-board').should('be.visible');",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#pixel-board`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#pixel-board`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:154:28)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#pixel-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:154:28)",
                 "diff": null
               },
-              "uuid": "9745f200-2b0a-4a3c-943d-c0c981d923c4",
-              "parentUUID": "45cbd16e-38e2-42c3-a4a0-fe23920a97cb",
+              "uuid": "4043cb87-0d0b-45cf-b077-6420fb4018a0",
+              "parentUUID": "d3ec1278-28c8-4a61-814a-1bfb9d1aa00c",
               "isHook": false,
               "skipped": false
             },
@@ -350,7 +310,7 @@
               "title": "Verifica se cada pixel individual dentro do quadro possui a `classe` denominada `pixel`.",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se cada pixel individual dentro do quadro possui a `classe` denominada `pixel`.",
               "timedOut": null,
-              "duration": 4123,
+              "duration": 4065,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -360,11 +320,11 @@
               "code": "cy.get('.pixel').should('have.length', 25);",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:157:22)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:157:22)",
                 "diff": null
               },
-              "uuid": "ab1d8c04-c25d-4839-966f-d93a2bc10305",
-              "parentUUID": "45cbd16e-38e2-42c3-a4a0-fe23920a97cb",
+              "uuid": "a1c4f53b-9555-46aa-9e5c-2b14055d1fe8",
+              "parentUUID": "d3ec1278-28c8-4a61-814a-1bfb9d1aa00c",
               "isHook": false,
               "skipped": false
             },
@@ -372,7 +332,7 @@
               "title": "Verifica se a cor inicial dos pixels dentro do quadro, ao abrir a página, é branca.",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se a cor inicial dos pixels dentro do quadro, ao abrir a página, é branca.",
               "timedOut": null,
-              "duration": 4085,
+              "duration": 4081,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -382,11 +342,11 @@
               "code": "cy.get('.pixel').should('have.length', 25).each(function (pixel) {\n  expect(pixel).to.have.css('background-color', WHITE);\n});",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:160:22)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:160:22)",
                 "diff": null
               },
-              "uuid": "cac94a7a-cb02-4645-b33c-7f58fd2cd3e6",
-              "parentUUID": "45cbd16e-38e2-42c3-a4a0-fe23920a97cb",
+              "uuid": "bd4f93c1-52d1-46ef-8cc3-c1a74ad6dd25",
+              "parentUUID": "d3ec1278-28c8-4a61-814a-1bfb9d1aa00c",
               "isHook": false,
               "skipped": false
             },
@@ -394,7 +354,7 @@
               "title": "Verifica se o quadro de pixels aparece abaixo da paleta de cores",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se o quadro de pixels aparece abaixo da paleta de cores",
               "timedOut": null,
-              "duration": 4083,
+              "duration": 4096,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -403,12 +363,12 @@
               "context": null,
               "code": "cy.get('#color-palette').then(function (palette) {\n  cy.get('#pixel-board').should('be.belowOf', palette);\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:165:8)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#pixel-board`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#pixel-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:166:30)",
                 "diff": null
               },
-              "uuid": "53684263-b658-481f-9073-b23376aa2d83",
-              "parentUUID": "45cbd16e-38e2-42c3-a4a0-fe23920a97cb",
+              "uuid": "308a250a-0c9f-485e-aea0-25eb83a6d361",
+              "parentUUID": "d3ec1278-28c8-4a61-814a-1bfb9d1aa00c",
               "isHook": false,
               "skipped": false
             }
@@ -416,20 +376,20 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "9745f200-2b0a-4a3c-943d-c0c981d923c4",
-            "ab1d8c04-c25d-4839-966f-d93a2bc10305",
-            "cac94a7a-cb02-4645-b33c-7f58fd2cd3e6",
-            "53684263-b658-481f-9073-b23376aa2d83"
+            "4043cb87-0d0b-45cf-b077-6420fb4018a0",
+            "a1c4f53b-9555-46aa-9e5c-2b14055d1fe8",
+            "bd4f93c1-52d1-46ef-8cc3-c1a74ad6dd25",
+            "308a250a-0c9f-485e-aea0-25eb83a6d361"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 16401,
+          "duration": 16334,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "370b59cf-6019-4fe1-b1d3-3dc283c8fee3",
+          "uuid": "5ac27b86-8d05-49b0-bf4d-e1dd7c6b50e3",
           "title": "5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel.",
           "fullFile": "",
           "file": "",
@@ -440,7 +400,7 @@
               "title": "Verifica se o quadro de pixels tem altura e comprimento de 5 elementos",
               "fullTitle": "5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel. Verifica se o quadro de pixels tem altura e comprimento de 5 elementos",
               "timedOut": null,
-              "duration": 4116,
+              "duration": 4107,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -450,11 +410,11 @@
               "code": "cy.get('.pixel').should('have.length', 25).each(function (pixel) {\n  expect(pixel).to.have.css('background-color', WHITE);\n}).and(function (pixels) {\n  var rows = chunk(pixels, 5);\n  rows.forEach(function (row) {\n    for (var index = 1; index < row.length; index += 1) {\n      var current = pixels[index];\n      var previous = pixels[index - 1];\n      cy.wrap(current).should('be.onTheRightOf', previous).and('be.horizontallyAlignedWith', previous);\n    }\n  });\n  for (var index = 1; index < 5; index += 1) {\n    expect(pixels[index * 5]).to.be.belowOf(pixels[(index - 1) * 5]);\n  }\n});",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:175:22)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:175:22)",
                 "diff": null
               },
-              "uuid": "f0caa168-0ea9-4e2c-8183-c1c257c95fbe",
-              "parentUUID": "370b59cf-6019-4fe1-b1d3-3dc283c8fee3",
+              "uuid": "d9981071-73d2-46b2-a5b9-ff29c17707e1",
+              "parentUUID": "5ac27b86-8d05-49b0-bf4d-e1dd7c6b50e3",
               "isHook": false,
               "skipped": false
             },
@@ -462,7 +422,7 @@
               "title": "Verifica se 40 pixels é o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.",
               "fullTitle": "5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel. Verifica se 40 pixels é o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.",
               "timedOut": null,
-              "duration": 4105,
+              "duration": 4078,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -472,11 +432,11 @@
               "code": "cy.get('.pixel').each(function (pixel) {\n  cy.wrap(pixel).should('have.css', 'height', '40px').and('have.css', 'width', '40px').and('have.css', 'border', \"1px solid \".concat(BLACK));\n});",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:193:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:193:8)",
                 "diff": null
               },
-              "uuid": "282f016e-f552-4c6b-a262-981821715329",
-              "parentUUID": "370b59cf-6019-4fe1-b1d3-3dc283c8fee3",
+              "uuid": "8afc75e6-e6d9-4085-8543-c9c88122dcdd",
+              "parentUUID": "5ac27b86-8d05-49b0-bf4d-e1dd7c6b50e3",
               "isHook": false,
               "skipped": false
             }
@@ -484,18 +444,18 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "f0caa168-0ea9-4e2c-8183-c1c257c95fbe",
-            "282f016e-f552-4c6b-a262-981821715329"
+            "d9981071-73d2-46b2-a5b9-ff29c17707e1",
+            "8afc75e6-e6d9-4085-8543-c9c88122dcdd"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8221,
+          "duration": 8185,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "e2bc06f3-c323-4cfb-8091-b8e86ea5452a",
+          "uuid": "05a8a83b-3233-4240-b942-c8567a2b8026",
           "title": "6 - Defina a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels",
           "fullFile": "",
           "file": "",
@@ -506,7 +466,7 @@
               "title": "Verifica se o elemento da cor preta possui, inicialmente, a `classe` `selected`",
               "fullTitle": "6 - Defina a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels Verifica se o elemento da cor preta possui, inicialmente, a `classe` `selected`",
               "timedOut": null,
-              "duration": 4140,
+              "duration": 4088,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -516,11 +476,11 @@
               "code": "cy.get('.selected').first().should('have.css', 'background-color', BLACK);",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `.selected`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.selected`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:203:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.selected`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:203:8)",
                 "diff": null
               },
-              "uuid": "1c3b8e90-d9c0-4aa7-a79d-0d33ba91c335",
-              "parentUUID": "e2bc06f3-c323-4cfb-8091-b8e86ea5452a",
+              "uuid": "4c42d380-3d62-49b5-9fa8-ff4a26211f42",
+              "parentUUID": "05a8a83b-3233-4240-b942-c8567a2b8026",
               "isHook": false,
               "skipped": false
             },
@@ -528,40 +488,37 @@
               "title": "Verifica se nenhuma outra cor da paleta tem a `classe` `selected`",
               "fullTitle": "6 - Defina a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels Verifica se nenhuma outra cor da paleta tem a `classe` `selected`",
               "timedOut": null,
-              "duration": 4142,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 100,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color:not(:first-child)').each(function (color) {\n  cy.wrap(color).should('not.have.class', 'selected');\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color:not(:first-child)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color:not(:first-child)`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:206:8)",
-                "diff": null
-              },
-              "uuid": "4c737274-c1ea-444c-8abd-16353a55a1e7",
-              "parentUUID": "e2bc06f3-c323-4cfb-8091-b8e86ea5452a",
+              "err": {},
+              "uuid": "c778e353-c56d-43ef-ac58-8008e8383023",
+              "parentUUID": "05a8a83b-3233-4240-b942-c8567a2b8026",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "c778e353-c56d-43ef-ac58-8008e8383023"
+          ],
           "failures": [
-            "1c3b8e90-d9c0-4aa7-a79d-0d33ba91c335",
-            "4c737274-c1ea-444c-8abd-16353a55a1e7"
+            "4c42d380-3d62-49b5-9fa8-ff4a26211f42"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8282,
+          "duration": 4188,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "cdab32d2-a0f5-4535-8239-793719b0e20d",
+          "uuid": "2db4ff9e-142d-4082-b11b-87894abd40bd",
           "title": "7 - Clicar em uma das cores da paleta, faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.",
           "fullFile": "",
           "file": "",
@@ -572,7 +529,7 @@
               "title": "Verifica se somente uma cor da paleta de cores tem a classe `selected` de cada vez",
               "fullTitle": "7 - Clicar em uma das cores da paleta, faz com que ela seja selecionada e utilizada para preencher os pixels no quadro. Verifica se somente uma cor da paleta de cores tem a classe `selected` de cada vez",
               "timedOut": null,
-              "duration": 4134,
+              "duration": 155,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -581,12 +538,12 @@
               "context": null,
               "code": "cy.get('.color').each(function (selectedColor, selectedColorIndex) {\n  cy.wrap(selectedColor).click();\n  cy.get('.color').each(function (color, colorIndex) {\n    if (colorIndex === selectedColorIndex) {\n      expect(color).to.have[\"class\"]('selected');\n    } else {\n      expect(color).not.to.have[\"class\"]('selected');\n    }\n  });\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:216:8)",
+                "message": "AssertionError: expected '<li.color>' to have class 'selected'",
+                "estack": "AssertionError: expected '<li.color>' to have class 'selected'\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:220:41)",
                 "diff": null
               },
-              "uuid": "213788e7-b5f6-4dcc-8b69-324f98a93e7e",
-              "parentUUID": "cdab32d2-a0f5-4535-8239-793719b0e20d",
+              "uuid": "e6c64ebe-8f82-4e6f-975e-990ac25e3110",
+              "parentUUID": "2db4ff9e-142d-4082-b11b-87894abd40bd",
               "isHook": false,
               "skipped": false
             },
@@ -594,7 +551,7 @@
               "title": "Verifica se os pixels dentro do quadro não têm a classe `selected` quando são clicados",
               "fullTitle": "7 - Clicar em uma das cores da paleta, faz com que ela seja selecionada e utilizada para preencher os pixels no quadro. Verifica se os pixels dentro do quadro não têm a classe `selected` quando são clicados",
               "timedOut": null,
-              "duration": 4130,
+              "duration": 4142,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -603,12 +560,12 @@
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  var backgroundColor = color.css('background-color');\n  cy.wrap(color).click();\n  cy.get('.pixel').each(function (pixel) {\n    cy.wrap(pixel).click().should('not.have.class', 'selected');\n  });\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:228:8)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:231:10)",
                 "diff": null
               },
-              "uuid": "09d990c4-aeb5-4958-ada8-9f1c26fa5408",
-              "parentUUID": "cdab32d2-a0f5-4535-8239-793719b0e20d",
+              "uuid": "a4a4654e-a5c8-44bd-9dd0-db60f6d1c671",
+              "parentUUID": "2db4ff9e-142d-4082-b11b-87894abd40bd",
               "isHook": false,
               "skipped": false
             }
@@ -616,18 +573,18 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "213788e7-b5f6-4dcc-8b69-324f98a93e7e",
-            "09d990c4-aeb5-4958-ada8-9f1c26fa5408"
+            "e6c64ebe-8f82-4e6f-975e-990ac25e3110",
+            "a4a4654e-a5c8-44bd-9dd0-db60f6d1c671"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8264,
+          "duration": 4297,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "bc93f8c5-ee73-4ebd-9f78-56f85bbca573",
+          "uuid": "6ecc9afb-b2a8-4bb5-8900-809fd4e610e8",
           "title": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.",
           "fullFile": "",
           "file": "",
@@ -638,7 +595,7 @@
               "title": "Verifica se ao carregar a página deve ser possível pintar os pixels de preto",
               "fullTitle": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada. Verifica se ao carregar a página deve ser possível pintar os pixels de preto",
               "timedOut": null,
-              "duration": 4127,
+              "duration": 4100,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -648,11 +605,11 @@
               "code": "cy.get('.pixel').each(function (pixel) {\n  cy.wrap(pixel).click().should('have.css', 'background-color', BLACK);\n});",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:242:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:242:8)",
                 "diff": null
               },
-              "uuid": "809488d3-134c-4b8f-9469-4a27a73befb7",
-              "parentUUID": "bc93f8c5-ee73-4ebd-9f78-56f85bbca573",
+              "uuid": "771013aa-29ba-4410-ac08-a5b2b24e2921",
+              "parentUUID": "6ecc9afb-b2a8-4bb5-8900-809fd4e610e8",
               "isHook": false,
               "skipped": false
             },
@@ -660,7 +617,7 @@
               "title": "Verifica se após selecionar uma outra cor na paleta, é possível pintar os pixels com essa cor",
               "fullTitle": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada. Verifica se após selecionar uma outra cor na paleta, é possível pintar os pixels com essa cor",
               "timedOut": null,
-              "duration": 4141,
+              "duration": 4171,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -669,12 +626,12 @@
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  var backgroundColor = color.css('background-color');\n  cy.wrap(color).click();\n  cy.get('.pixel').each(function (pixel) {\n    cy.wrap(pixel).click().should('have.css', 'background-color', backgroundColor);\n  });\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:247:8)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:250:10)",
                 "diff": null
               },
-              "uuid": "38d3a149-caba-401d-964b-4bda9cf90c02",
-              "parentUUID": "bc93f8c5-ee73-4ebd-9f78-56f85bbca573",
+              "uuid": "18bd4e9c-8988-49e6-8ae6-dea47d1363ff",
+              "parentUUID": "6ecc9afb-b2a8-4bb5-8900-809fd4e610e8",
               "isHook": false,
               "skipped": false
             },
@@ -682,7 +639,7 @@
               "title": "Verifica se somente o pixel que foi clicado foi preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.",
               "fullTitle": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada. Verifica se somente o pixel que foi clicado foi preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.",
               "timedOut": null,
-              "duration": 4116,
+              "duration": 4180,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -691,12 +648,12 @@
               "context": null,
               "code": "var colorToPixelIndexMap = {\n  0: 6,\n  1: 8,\n  2: 16,\n  3: 18\n};\ncy.get('.color').each(function (color, index) {\n  cy.wrap(color).click();\n  var backgroundColor = color.css('background-color');\n  var clickedPixelIndex = colorToPixelIndexMap[index];\n  cy.get('.pixel').eq(clickedPixelIndex).click();\n  cy.get('.pixel').eq(clickedPixelIndex - 1).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 1).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex - 5).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 5).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex - 6).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex - 4).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 4).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 6).should('not.have.css', 'background-color', backgroundColor);\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:262:8)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:266:10)",
                 "diff": null
               },
-              "uuid": "da39b088-2eff-4a71-b3c8-8168f9bc9433",
-              "parentUUID": "bc93f8c5-ee73-4ebd-9f78-56f85bbca573",
+              "uuid": "23dc4766-9101-4dba-9268-be9264a3bba8",
+              "parentUUID": "6ecc9afb-b2a8-4bb5-8900-809fd4e610e8",
               "isHook": false,
               "skipped": false
             }
@@ -704,19 +661,19 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "809488d3-134c-4b8f-9469-4a27a73befb7",
-            "38d3a149-caba-401d-964b-4bda9cf90c02",
-            "da39b088-2eff-4a71-b3c8-8168f9bc9433"
+            "771013aa-29ba-4410-ac08-a5b2b24e2921",
+            "18bd4e9c-8988-49e6-8ae6-dea47d1363ff",
+            "23dc4766-9101-4dba-9268-be9264a3bba8"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 12384,
+          "duration": 12451,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "335393ff-4e8c-4f7e-bbe9-eb60b2366378",
+          "uuid": "2b9a1b9e-0100-4479-a3ce-92d5613a561f",
           "title": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.",
           "fullFile": "",
           "file": "",
@@ -727,7 +684,7 @@
               "title": "Verifica se o botão tem o `id` denominado `clear-board`",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se o botão tem o `id` denominado `clear-board`",
               "timedOut": null,
-              "duration": 4184,
+              "duration": 4134,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -737,11 +694,11 @@
               "code": "cy.get('#clear-board').should('be.visible');",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:283:28)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:283:28)",
                 "diff": null
               },
-              "uuid": "70b815a8-66dd-4702-b5d1-341e1ada9380",
-              "parentUUID": "335393ff-4e8c-4f7e-bbe9-eb60b2366378",
+              "uuid": "b225685a-233c-4254-bc9e-2aba2da93701",
+              "parentUUID": "2b9a1b9e-0100-4479-a3ce-92d5613a561f",
               "isHook": false,
               "skipped": false
             },
@@ -749,7 +706,7 @@
               "title": "Verifica se o botão está posicionado entre a paleta de cores e o quadro de pixels",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se o botão está posicionado entre a paleta de cores e o quadro de pixels",
               "timedOut": null,
-              "duration": 4134,
+              "duration": 4098,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -758,12 +715,12 @@
               "context": null,
               "code": "cy.get('#color-palette').then(function (palette) {\n  cy.get('#clear-board').should('be.belowOf', palette);\n});\ncy.get('#clear-board').then(function (clearBtn) {\n  cy.get('#pixel-board').should('be.belowOf', clearBtn);\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:286:8)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:287:30)",
                 "diff": null
               },
-              "uuid": "952c3340-896e-4e6e-86ff-b63eb24bb84b",
-              "parentUUID": "335393ff-4e8c-4f7e-bbe9-eb60b2366378",
+              "uuid": "008466b6-780e-4d00-9742-52e4ec075330",
+              "parentUUID": "2b9a1b9e-0100-4479-a3ce-92d5613a561f",
               "isHook": false,
               "skipped": false
             },
@@ -771,7 +728,7 @@
               "title": "Verifica se o texto do botão é 'Limpar'",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se o texto do botão é 'Limpar'",
               "timedOut": null,
-              "duration": 4163,
+              "duration": 4086,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -781,11 +738,11 @@
               "code": "cy.get('#clear-board').should('contain.text', 'Limpar');",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:294:28)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#clear-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:294:28)",
                 "diff": null
               },
-              "uuid": "d67e9a81-f9bc-4aae-9ed7-69e96c264ba3",
-              "parentUUID": "335393ff-4e8c-4f7e-bbe9-eb60b2366378",
+              "uuid": "241a3320-109a-44ef-8bc1-51105985f786",
+              "parentUUID": "2b9a1b9e-0100-4479-a3ce-92d5613a561f",
               "isHook": false,
               "skipped": false
             },
@@ -793,7 +750,7 @@
               "title": "Verifica se ao clicar no botão, o quadro de pixels é totalmente preenchido de branco",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se ao clicar no botão, o quadro de pixels é totalmente preenchido de branco",
               "timedOut": null,
-              "duration": 4123,
+              "duration": 4200,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -802,12 +759,12 @@
               "context": null,
               "code": "cy.get('.color').eq(1).then(function (color) {\n  var backgroundColor = color.css('background-color');\n  cy.wrap(color).click();\n  cy.get('.pixel').each(function (pixel) {\n    cy.wrap(pixel).click().should('have.css', 'background-color', backgroundColor);\n  });\n});\ncy.get('#clear-board').click();\ncy.get('.pixel').each(function (pixel) {\n  cy.wrap(pixel).should('have.css', 'background-color', WHITE);\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:297:8)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.pixel`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:300:10)",
                 "diff": null
               },
-              "uuid": "b30a9fda-2313-4924-8711-d2f7c0719eb6",
-              "parentUUID": "335393ff-4e8c-4f7e-bbe9-eb60b2366378",
+              "uuid": "c89d1510-a792-4cec-9b7d-19297bca2672",
+              "parentUUID": "2b9a1b9e-0100-4479-a3ce-92d5613a561f",
               "isHook": false,
               "skipped": false
             }
@@ -815,20 +772,20 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "70b815a8-66dd-4702-b5d1-341e1ada9380",
-            "952c3340-896e-4e6e-86ff-b63eb24bb84b",
-            "d67e9a81-f9bc-4aae-9ed7-69e96c264ba3",
-            "b30a9fda-2313-4924-8711-d2f7c0719eb6"
+            "b225685a-233c-4254-bc9e-2aba2da93701",
+            "008466b6-780e-4d00-9742-52e4ec075330",
+            "241a3320-109a-44ef-8bc1-51105985f786",
+            "c89d1510-a792-4cec-9b7d-19297bca2672"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 16604,
+          "duration": 16518,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+          "uuid": "47b7385a-fd67-4cce-afa1-b97935b87543",
           "title": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.",
           "fullFile": "",
           "file": "",
@@ -839,7 +796,7 @@
               "title": "Verifica se existe um input com o id `board-size`",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se existe um input com o id `board-size`",
               "timedOut": null,
-              "duration": 4155,
+              "duration": 4147,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -849,11 +806,11 @@
               "code": "cy.get('#board-size').should('be.visible');",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:315:27)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:315:27)",
                 "diff": null
               },
-              "uuid": "af28162a-a0f2-47f0-a89d-aeff2dfec86c",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "b2547726-3184-4022-888c-8b6b0f129a3a",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -861,7 +818,7 @@
               "title": "Verifica se existe um botão com o id `generate-board`",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se existe um botão com o id `generate-board`",
               "timedOut": null,
-              "duration": 4099,
+              "duration": 4107,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -871,11 +828,11 @@
               "code": "cy.get('#generate-board').should('be.visible');",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:318:31)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:318:31)",
                 "diff": null
               },
-              "uuid": "5827accd-6864-487b-819c-7d2241b60731",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "0f15d356-1d0b-4afc-b42b-8c7d4022aed5",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -883,7 +840,7 @@
               "title": "Verifica se o input só aceita número maiores que zero. Essa restrição deve ser feita usando os atributos do elemento `input`",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o input só aceita número maiores que zero. Essa restrição deve ser feita usando os atributos do elemento `input`",
               "timedOut": null,
-              "duration": 4115,
+              "duration": 4084,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -893,11 +850,11 @@
               "code": "cy.get('#board-size[type=\\'number\\'][min=\\'1\\']');",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size[type='number'][min='1']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size[type='number'][min='1']`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:321:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size[type='number'][min='1']`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:321:8)",
                 "diff": null
               },
-              "uuid": "b57a8ed5-65e8-4d77-bc56-a3213532e3db",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "ee63cf30-abda-46f0-9f98-2cbce88c2f75",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -905,7 +862,7 @@
               "title": "Verifica se o botão contém o texto 'VQV'",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o botão contém o texto 'VQV'",
               "timedOut": null,
-              "duration": 4148,
+              "duration": 4088,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -915,11 +872,11 @@
               "code": "cy.get('#generate-board').contains(/vqv/i);",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:324:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:324:8)",
                 "diff": null
               },
-              "uuid": "8760bbbb-7c58-4d75-bcee-09a6b7503ac6",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "1c8a780e-38b4-4a14-9c0c-8860f0e7d508",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -927,7 +884,7 @@
               "title": "Verifica se o input está posicionado entre a paleta de cores e o quadro de pixels",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o input está posicionado entre a paleta de cores e o quadro de pixels",
               "timedOut": null,
-              "duration": 4176,
+              "duration": 4106,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -936,12 +893,12 @@
               "context": null,
               "code": "cy.get('#color-palette').then(function (palette) {\n  cy.get('#board-size').should('be.belowOf', palette);\n});\ncy.get('#board-size').then(function (palette) {\n  cy.get('#pixel-board').should('be.belowOf', palette);\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#color-palette`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:327:8)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:328:29)",
                 "diff": null
               },
-              "uuid": "69be6c48-9e3c-4e4e-a6ee-5c06d5cdd50c",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "72852259-8cd0-4cac-b4ab-d7f5ddf87ac1",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -949,7 +906,7 @@
               "title": "Verifica se o botão está posicionado ao lado do input",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o botão está posicionado ao lado do input",
               "timedOut": null,
-              "duration": 4138,
+              "duration": 4074,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -959,11 +916,11 @@
               "code": "cy.get('#board-size').then(function (board) {\n  cy.get('#generate-board').should('be.onTheRightOf', board);\n});",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:335:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:335:8)",
                 "diff": null
               },
-              "uuid": "b167eade-9eb7-468e-bd74-7e89a6cc58ce",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "97609193-cdc5-40de-bea3-1e5dc6a4f4fd",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -971,7 +928,7 @@
               "title": "Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: 'Board inválido!'",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: 'Board inválido!'",
               "timedOut": null,
-              "duration": 4126,
+              "duration": 4110,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -981,11 +938,11 @@
               "code": "var alerted = false;\ncy.on('window:alert', function (msg) {\n  return alerted = msg;\n});\ncy.get('#generate-board').click().then(function () {\n  return expect(alerted).to.match(/Board inválido!/i);\n});",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:344:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#generate-board`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:344:8)",
                 "diff": null
               },
-              "uuid": "d522245d-d9a3-4b70-9053-a0fa5aa50410",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "8f45f7f7-9716-4898-bef3-6b3a712260e7",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -993,7 +950,7 @@
               "title": "Verifica se ao clicar no botão com um valor preenchido, o tamanho do board muda.",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se ao clicar no botão com um valor preenchido, o tamanho do board muda.",
               "timedOut": null,
-              "duration": 4145,
+              "duration": 4123,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1003,11 +960,11 @@
               "code": "cy.get('#board-size').clear().type(10);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 100);",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:349:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:349:8)",
                 "diff": null
               },
-              "uuid": "629194bd-d9cc-4dec-a531-73a739e233da",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "37e0e443-f7b1-4d4f-bc35-09f0afa8189e",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             },
@@ -1015,7 +972,7 @@
               "title": "Verifica se o novo quadro tem todos os pixels preenchidos com a cor branca",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o novo quadro tem todos os pixels preenchidos com a cor branca",
               "timedOut": null,
-              "duration": 4110,
+              "duration": 4102,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1025,11 +982,11 @@
               "code": "cy.get('#board-size').clear().type(6);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 36).each(function (pixel) {\n  expect(pixel).to.have.css('background-color', WHITE);\n});",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:354:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:354:8)",
                 "diff": null
               },
-              "uuid": "83ad61bf-f815-4aaa-865b-5d83c50fca10",
-              "parentUUID": "2edfe047-d9ec-4c43-b95e-fc8475f075fc",
+              "uuid": "41219e25-3a13-4609-9ddf-bb7c4345cb6d",
+              "parentUUID": "47b7385a-fd67-4cce-afa1-b97935b87543",
               "isHook": false,
               "skipped": false
             }
@@ -1037,25 +994,25 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "af28162a-a0f2-47f0-a89d-aeff2dfec86c",
-            "5827accd-6864-487b-819c-7d2241b60731",
-            "b57a8ed5-65e8-4d77-bc56-a3213532e3db",
-            "8760bbbb-7c58-4d75-bcee-09a6b7503ac6",
-            "69be6c48-9e3c-4e4e-a6ee-5c06d5cdd50c",
-            "b167eade-9eb7-468e-bd74-7e89a6cc58ce",
-            "d522245d-d9a3-4b70-9053-a0fa5aa50410",
-            "629194bd-d9cc-4dec-a531-73a739e233da",
-            "83ad61bf-f815-4aaa-865b-5d83c50fca10"
+            "b2547726-3184-4022-888c-8b6b0f129a3a",
+            "0f15d356-1d0b-4afc-b42b-8c7d4022aed5",
+            "ee63cf30-abda-46f0-9f98-2cbce88c2f75",
+            "1c8a780e-38b4-4a14-9c0c-8860f0e7d508",
+            "72852259-8cd0-4cac-b4ab-d7f5ddf87ac1",
+            "97609193-cdc5-40de-bea3-1e5dc6a4f4fd",
+            "8f45f7f7-9716-4898-bef3-6b3a712260e7",
+            "37e0e443-f7b1-4d4f-bc35-09f0afa8189e",
+            "41219e25-3a13-4609-9ddf-bb7c4345cb6d"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 37212,
+          "duration": 36941,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "92be4da1-462e-45b2-abe5-8431d77d2ff4",
+          "uuid": "6670d774-52d4-4229-8d51-7d7328234c66",
           "title": "11 - Limite o tamanho mínimo e máximo do board.",
           "fullFile": "",
           "file": "",
@@ -1066,7 +1023,7 @@
               "title": "Verifica se a altura máxima do board é 50",
               "fullTitle": "11 - Limite o tamanho mínimo e máximo do board. Verifica se a altura máxima do board é 50",
               "timedOut": null,
-              "duration": 4224,
+              "duration": 4147,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1076,11 +1033,11 @@
               "code": "cy.get('#board-size').clear().type(50);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 2500);",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:366:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:366:8)",
                 "diff": null
               },
-              "uuid": "5c1850f1-980b-41cc-839c-50822f5a0754",
-              "parentUUID": "92be4da1-462e-45b2-abe5-8431d77d2ff4",
+              "uuid": "e9a2d486-b6c5-4850-b2cf-bcd257eab33e",
+              "parentUUID": "6670d774-52d4-4229-8d51-7d7328234c66",
               "isHook": false,
               "skipped": false
             },
@@ -1098,11 +1055,11 @@
               "code": "cy.get('#board-size').clear().type(4);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 25);",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:371:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:371:8)",
                 "diff": null
               },
-              "uuid": "887cba10-6564-4e1b-b999-4eec9c835d1d",
-              "parentUUID": "92be4da1-462e-45b2-abe5-8431d77d2ff4",
+              "uuid": "486d8cbc-3c0d-4962-81c3-1a69f048d917",
+              "parentUUID": "6670d774-52d4-4229-8d51-7d7328234c66",
               "isHook": false,
               "skipped": false
             },
@@ -1110,7 +1067,7 @@
               "title": "Verifica se a altura do board é 50 quando um valor maior é colocado no input",
               "fullTitle": "11 - Limite o tamanho mínimo e máximo do board. Verifica se a altura do board é 50 quando um valor maior é colocado no input",
               "timedOut": null,
-              "duration": 4122,
+              "duration": 4138,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1120,11 +1077,11 @@
               "code": "cy.get('#board-size').clear().type(51);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 2500);",
               "err": {
                 "message": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:376:8)",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#board-size`, but never found it.\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:376:8)",
                 "diff": null
               },
-              "uuid": "b70a8c6d-a7c4-4730-aa66-d5cb789c664d",
-              "parentUUID": "92be4da1-462e-45b2-abe5-8431d77d2ff4",
+              "uuid": "4ed0f94a-51de-4709-8c6d-c0110db42371",
+              "parentUUID": "6670d774-52d4-4229-8d51-7d7328234c66",
               "isHook": false,
               "skipped": false
             }
@@ -1132,19 +1089,19 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "5c1850f1-980b-41cc-839c-50822f5a0754",
-            "887cba10-6564-4e1b-b999-4eec9c835d1d",
-            "b70a8c6d-a7c4-4730-aa66-d5cb789c664d"
+            "e9a2d486-b6c5-4850-b2cf-bcd257eab33e",
+            "486d8cbc-3c0d-4962-81c3-1a69f048d917",
+            "4ed0f94a-51de-4709-8c6d-c0110db42371"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 12423,
+          "duration": 12362,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "e6449709-d87a-40bd-a267-2611d49eb096",
+          "uuid": "58bd8a28-a207-4bc8-80be-829f21942cda",
           "title": "12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.",
           "fullFile": "",
           "file": "",
@@ -1155,7 +1112,7 @@
               "title": "Verifica se as cores geradas na paleta são diferentes a cada carregamento da página",
               "fullTitle": "12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página. Verifica se as cores geradas na paleta são diferentes a cada carregamento da página",
               "timedOut": null,
-              "duration": 4104,
+              "duration": 152,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1164,12 +1121,12 @@
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  var currentColors;\n  var previousColors;\n  previousColors = Array.from(colors).map(function (color) {\n    return Cypress.$(color).css('background-color');\n  });\n  for (var i = 0; i < 5; i += 1) {\n    cy.reload();\n    cy.get('.color').then(function (colors) {\n      currentColors = Array.from(colors).map(function (color) {\n        return Cypress.$(color).css('background-color');\n      });\n      expect(currentColors).not.to.deep.equal(previousColors);\n      previousColors = currentColors;\n    });\n  }\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:386:8)",
-                "diff": null
+                "message": "AssertionError: expected [ Array(4) ] to not deeply equal [ Array(4) ]",
+                "estack": "AssertionError: expected [ Array(4) ] to not deeply equal [ Array(4) ]\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:399:45)",
+                "diff": ""
               },
-              "uuid": "9574dbaa-d6c2-4d16-8677-545eda8ecef8",
-              "parentUUID": "e6449709-d87a-40bd-a267-2611d49eb096",
+              "uuid": "09d2c5ce-681a-4707-964b-4fc752947350",
+              "parentUUID": "58bd8a28-a207-4bc8-80be-829f21942cda",
               "isHook": false,
               "skipped": false
             },
@@ -1177,7 +1134,7 @@
               "title": "Verifica se a cor preta ainda está presente e é a primeira na sua paleta de cores",
               "fullTitle": "12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página. Verifica se a cor preta ainda está presente e é a primeira na sua paleta de cores",
               "timedOut": null,
-              "duration": 4144,
+              "duration": 152,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1186,12 +1143,12 @@
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  var currentColors;\n  var previousColors;\n  previousColors = Array.from(colors).map(function (color) {\n    return Cypress.$(color).css('background-color');\n  });\n  expect(previousColors[0]).to.eq(BLACK);\n  for (var i = 0; i < 5; i += 1) {\n    cy.reload();\n    cy.get('.color').then(function (colors) {\n      currentColors = Array.from(colors).map(function (color) {\n        return Cypress.$(color).css('background-color');\n      });\n      expect(currentColors[0]).to.eq(BLACK);\n      expect(currentColors).not.to.deep.equal(previousColors);\n      previousColors = currentColors;\n    });\n  }\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.",
-                "estack": "AssertionError: Timed out retrying: Expected to find element: `.color`, but never found it.\n    at Context.eval (http://localhost:41823/__cypress/tests?p=cypress/integration/project.spec.js:406:8)",
-                "diff": null
+                "message": "AssertionError: expected [ Array(4) ] to not deeply equal [ Array(4) ]",
+                "estack": "AssertionError: expected [ Array(4) ] to not deeply equal [ Array(4) ]\n    at Context.eval (http://localhost:37087/__cypress/tests?p=cypress/integration/project.spec.js:421:45)",
+                "diff": ""
               },
-              "uuid": "ec9a6326-ad56-419b-ac14-d7ba368e9562",
-              "parentUUID": "e6449709-d87a-40bd-a267-2611d49eb096",
+              "uuid": "30d95836-f5ec-4cbc-adc2-db03917ea019",
+              "parentUUID": "58bd8a28-a207-4bc8-80be-829f21942cda",
               "isHook": false,
               "skipped": false
             }
@@ -1199,12 +1156,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "9574dbaa-d6c2-4d16-8677-545eda8ecef8",
-            "ec9a6326-ad56-419b-ac14-d7ba368e9562"
+            "09d2c5ce-681a-4707-964b-4fc752947350",
+            "30d95836-f5ec-4cbc-adc2-db03917ea019"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8248,
+          "duration": 304,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

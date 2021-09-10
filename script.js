@@ -1,7 +1,7 @@
-const setColors = ['#D16630', '#235C44', '#6D2975', '#750D10'];
+const setColors = ['#000000', '#235C44', '#6D2975', '#750D10'];
 
 function createPaletteColors() {
-  const paletteColor = document.querySelector('.palettes');
+  const paletteColor = document.querySelector('#color-palette');
   for (let index = 0; index < setColors.length; index += 1) {
     const createListColor = document.createElement('li');
     createListColor.style.backgroundColor = setColors[index];

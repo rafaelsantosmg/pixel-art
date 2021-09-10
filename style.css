@@ -1,4 +1,10 @@
-.palhetaCores {color: #D16630; color: #235C44; color: #6D2975; color: #750D10}
+.palhetaCores1 { color: #d16630; }
+
+.palhetaCores2 { color: #235c44; }
+
+.palhetaCores3 { color: #6d2975; }
+
+.palhetaCores4 { color: #750d10; }
 
 * {
   margin: 0;
@@ -12,11 +18,11 @@ body {
 #title {
   font-size: 40pt;
   text-align: center;
-  color: whitesmoke;
+  color: white;
   margin: 20px;
 }
 
-.palettes {
+#color-palette {
   display: block;
   text-align: center;
 }
