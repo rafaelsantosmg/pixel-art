@@ -50,3 +50,14 @@ body {
   height: 40px;
   border: 1px solid black;
 }
+
+.buttons {
+  margin: 10px;
+  text-align: center;
+}
+
+#clear-board {
+  width: 80px;
+  padding: 5px;
+  font-size: large;
+}

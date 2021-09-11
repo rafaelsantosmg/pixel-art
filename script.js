@@ -54,3 +54,13 @@ for (let index = 0; index < selectPixels.length; index += 1) {
     selectPixels[index].style.backgroundColor = pixelColor;
   });
 }
+
+const selectButton = document.querySelector('#clear-board');
+selectButton.addEventListener('click', () => {
+  const colorSelect = document.querySelector('.selected').style.backgroundColor;
+  for (let index = 0; index < selectPixels.length; index += 1) {
+    if (selectPixels[index].style.backgroundColor === colorSelect) {
+      selectPixels[index].style.backgroundColor = 'white';
+    }
+  }
+});
