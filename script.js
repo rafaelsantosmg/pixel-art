@@ -46,3 +46,11 @@ for (let index = 0; index < selectPalette.length; index += 1) {
     }
   });
 }
+
+const selectPixels = document.querySelectorAll('.pixel');
+for (let index = 0; index < selectPixels.length; index += 1) {
+  selectPixels[index].addEventListener('click', () => {
+    const pixelColor = document.querySelector('.selected').style.backgroundColor;
+    selectPixels[index].style.backgroundColor = pixelColor;
+  });
+}
