@@ -1,6 +1,5 @@
 const setColors = ['rgb(0, 0, 0)', 'rgb(35, 92, 68)', 'rgb(109, 41, 117)', 'rgb(117, 13, 16)'];
 const pixelBoard = document.querySelector('#pixel-board');
-let = lineColum = 5;
 
 // Cria a paleta de cores e preeche o backgroud com cada cor.
 function createPaletteColors() {
@@ -41,7 +40,7 @@ function createColum(lineColum) {
 }
 
 // Chama a função para criar o box com valor inicial 5*5.
-createColum(lineColum);
+createColum(5);
 
 // Função para remover todas as linhas do box.
 function removeLine() {
@@ -60,14 +59,17 @@ function removeColum() {
 }
 
 //  Função que ao clicar recebe a cor da palheta selecionada.
-const selectPixels = document.querySelectorAll('.pixel');
-for (let index = 0; index < selectPixels.length; index += 1) {
-  selectPixels[index].addEventListener('click', () => {
-    const pixelColor = document.querySelector('.selected').style.backgroundColor;
-    selectPixels[index].style.backgroundColor = pixelColor;
-  });
+function paintPixel() {
+  const selectPixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < selectPixels.length; index += 1) {
+    selectPixels[index].addEventListener('click', () => {
+      const pixelColor = document.querySelector('.selected').style.backgroundColor;
+      selectPixels[index].style.backgroundColor = pixelColor;
+    });
+  }
 }
 
+// Função Seleciona a cor na palheta para preencher os quadrados.
 const selectPalette = document.querySelectorAll('.color');
 selectPalette[0].classList.add('selected');
 for (let index = 0; index < selectPalette.length; index += 1) {
@@ -79,26 +81,32 @@ for (let index = 0; index < selectPalette.length; index += 1) {
   });
 }
 
+paintPixel();
+
 const selectButtonClear = document.querySelector('#clear-board');
 selectButtonClear.addEventListener('click', () => {
-  const colorSelect = document.querySelector('.selected').style.backgroundColor;
+  const selectPixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < selectPixels.length; index += 1) {
-    if (selectPixels[index].style.backgroundColor === colorSelect) {
-      selectPixels[index].style.backgroundColor = 'white';
-    }
+    selectPixels[index].style.backgroundColor = 'white';
   }
 });
 
 const inputText = document.querySelector('#board-size');
 const selectButtonBoard = document.querySelector('#generate-board');
+let lineColum = 0;
 selectButtonBoard.addEventListener('click', () => {
   if (inputText.value === '') {
     return alert('Board inválido!');
   }
+  if (inputText.value < 5) {
+    lineColum = 5;
+  } else if (inputText.value > 50) {
+    lineColum = 50;
+  } else {
+    lineColum = inputText.value;
+  }
   removeLine();
   removeColum();
-  lineColum = inputText.value;
   createColum(lineColum);
+  paintPixel();
 });
-
-const teste = document.querySelectorAll('.pixel');
