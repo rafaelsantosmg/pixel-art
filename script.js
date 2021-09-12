@@ -1,12 +1,24 @@
-const setColors = ['rgb(0, 0, 0)', 'rgb(35, 92, 68)', 'rgb(109, 41, 117)', 'rgb(117, 13, 16)'];
+function createColorRgb() {
+  const color1 = (Math.floor(Math.random() * (1, 255 + 1)));
+  const color2 = (Math.floor(Math.random() * (1, 255 + 1)));
+  const color3 = (Math.floor(Math.random() * (1, 255 + 1)));
+  return `rgb(${color1}, ${color2}, ${color3})`;
+}
+
 const pixelBoard = document.querySelector('#pixel-board');
 
 // Cria a paleta de cores e preeche o backgroud com cada cor.
 function createPaletteColors() {
   const paletteColor = document.querySelector('#color-palette');
-  for (let index = 0; index < setColors.length; index += 1) {
+  for (let index = 0; index < 4; index += 1) {
+    let color = 0;
+    if (index === 0) {
+      color = 'rgb(0, 0, 0)';
+    } else {
+      color = createColorRgb();
+    }
     const createListColor = document.createElement('div');
-    createListColor.style.backgroundColor = setColors[index];
+    createListColor.style.backgroundColor = color;
     createListColor.classList.add('color');
     paletteColor.appendChild(createListColor);
   }
