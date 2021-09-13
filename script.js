@@ -1,11 +1,17 @@
+// Declaração de constantes e variáveis Globais.
+const pixelBoard = document.querySelector('#pixel-board');
+const inputText = document.querySelector('#board-size');
+const selectButtonClear = document.querySelector('#clear-board');
+const selectButtonBoard = document.querySelector('#generate-board');
+let lineColum = 0;
+
+// Função para geração de cores aleatóias.
 function createColorRgb() {
   const color1 = (Math.floor(Math.random() * (1, 255 + 1)));
   const color2 = (Math.floor(Math.random() * (1, 255 + 1)));
   const color3 = (Math.floor(Math.random() * (1, 255 + 1)));
   return `rgb(${color1}, ${color2}, ${color3})`;
 }
-
-const pixelBoard = document.querySelector('#pixel-board');
 
 // Cria a paleta de cores e preeche o backgroud com cada cor.
 function createPaletteColors() {
@@ -22,37 +28,28 @@ function createPaletteColors() {
     createListColor.classList.add('color');
     paletteColor.appendChild(createListColor);
   }
-  // Define a primeira paleta da cor Preta como Selecionada.
-  const selectPalette = document.querySelectorAll('.color');
-  selectPalette[0].classList.add('selected');
 }
 
-// Chama a função para criar a paleta de cores.
-createPaletteColors();
-
 // Função que cria linha do box usando uma lista.
-function createLine(lineColum) {
-  for (let index = 0; index < lineColum; index += 1) {
-    const createLineBoard = document.createElement('li');
-    createLineBoard.style.backgroundColor = 'white';
-    createLineBoard.classList.add('pixel');
-    pixelBoard.appendChild(createLineBoard);
+function createColum(colum) {
+  for (let index = 0; index < colum; index += 1) {
+    const createColumBoard = document.createElement('li');
+    createColumBoard.style.backgroundColor = 'white';
+    createColumBoard.classList.add('pixel');
+    pixelBoard.appendChild(createColumBoard);
   }
 }
 
 // Função que cria colunas do box usando listas.
-function createColum(lineColum) {
-  for (let index = 0; index < lineColum; index += 1) {
-    const createColumBoard = document.createElement('ul');
-    createColumBoard.classList.add('colum-pixel');
-    pixelBoard.appendChild(createColumBoard);
+function createLine(line) {
+  for (let index = 0; index < line; index += 1) {
+    const createLineBoard = document.createElement('ul');
+    createLineBoard.classList.add('colum-pixel');
+    pixelBoard.appendChild(createLineBoard);
     // Chama a função cria linha definindo o parametro de quantidade de linhas a serem criadas.
-    createLine(lineColum);
+    createColum(line);
   }
 }
-
-// Chama a função para criar o box com valor inicial 5*5.
-createColum(5);
 
 // Função para remover todas as linhas do box.
 function removeLine() {
@@ -81,21 +78,6 @@ function paintPixel() {
   }
 }
 
-// Função Seleciona a cor na palheta para preencher os quadrados.
-const selectPalette = document.querySelectorAll('.color');
-selectPalette[0].classList.add('selected');
-for (let index = 0; index < selectPalette.length; index += 1) {
-  selectPalette[index].addEventListener('click', (event) => {
-    for (index = 0; index < selectPalette.length; index += 1) {
-      selectPalette[index].classList.remove('selected');
-      event.target.classList.add('selected');
-    }
-  });
-}
-
-paintPixel();
-
-const selectButtonClear = document.querySelector('#clear-board');
 selectButtonClear.addEventListener('click', () => {
   const selectPixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < selectPixels.length; index += 1) {
@@ -103,9 +85,6 @@ selectButtonClear.addEventListener('click', () => {
   }
 });
 
-const inputText = document.querySelector('#board-size');
-const selectButtonBoard = document.querySelector('#generate-board');
-let lineColum = 0;
 selectButtonBoard.addEventListener('click', () => {
   if (inputText.value === '') {
     return alert('Board inválido!');
@@ -119,6 +98,28 @@ selectButtonBoard.addEventListener('click', () => {
   }
   removeLine();
   removeColum();
-  createColum(lineColum);
+  createLine(lineColum);
   paintPixel();
 });
+
+// Função Seleciona a cor na palheta para preencher os pixels.
+// Usei a propriedade onload para carregar após a chamadas das funções principais.
+window.onload = () => {
+  const selectPalette = document.querySelectorAll('.color');
+  selectPalette[0].classList.add('selected');
+  for (let index = 0; index < selectPalette.length; index += 1) {
+    selectPalette[index].addEventListener('click', (event) => {
+      for (index = 0; index < selectPalette.length; index += 1) {
+        selectPalette[index].classList.remove('selected');
+        event.target.classList.add('selected');
+      }
+    });
+  }
+};
+
+// Chama a função para criar a paleta de cores.
+createPaletteColors();
+// Chama a função para criar o box com valor inicial 5*5.
+createLine(5);
+// Função para pintas os pixels.
+paintPixel();
